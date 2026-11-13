@@ -10,3 +10,4 @@ response = client.chat(
     },
   ],
 )
+print(response.message.content)
