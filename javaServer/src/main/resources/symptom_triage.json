@@ -1,0 +1,343 @@
+{
+  "version": "0.1",
+  "disclaimer": "Draft for a hackathon demo. Not medical advice. Have a medical professional review before any real use. When in doubt, always choose the higher level.",
+  "emergency_number": "112",
+  "global_escalation_rules": [
+    "If the user is under 2 years old and has a fever, go to at least yellow.",
+    "If the user is pregnant or breastfeeding, never go below yellow.",
+    "If the user has a chronic disease or takes regular medication, never go below yellow.",
+    "If symptoms last longer than the 'max_days' of a green symptom, move up to yellow.",
+    "If the symptoms get worse or do not improve within 48-72 hours, move up to yellow.",
+    "If two or more yellow symptoms are present together, consider red.",
+    "If the text matches any red keyword, return red immediately, before any AI answer."
+  ],
+  "levels": {
+    "red": {
+      "color": "red",
+      "action": "call_112",
+      "pharmacy_suggestion": false,
+      "show_doctor_booking": false,
+      "ui_message_en": "These symptoms may be serious. Call 112 now. Do not wait and do not drive yourself.",
+      "ui_message_ro": "Aceste simptome pot fi grave. Sună acum la 112. Nu aștepta și nu conduce singur.",
+      "symptoms": [
+        {
+          "id": "R01",
+          "name": "Chest pain or pressure",
+          "keywords_en": ["chest pain", "chest pressure", "tight chest", "pain in left arm", "pain in jaw"],
+          "keywords_ro": ["durere în piept", "presiune în piept", "durere în brațul stâng", "durere în maxilar"]
+        },
+        {
+          "id": "R02",
+          "name": "Severe difficulty breathing",
+          "keywords_en": ["cannot breathe", "can't breathe", "short of breath", "gasping", "blue lips"],
+          "keywords_ro": ["nu pot respira", "lipsă de aer", "respirație grea", "buze vinete"]
+        },
+        {
+          "id": "R03",
+          "name": "Stroke signs",
+          "keywords_en": ["face drooping", "slurred speech", "cannot speak", "arm weakness", "sudden numbness"],
+          "keywords_ro": ["fața căzută", "vorbire neclară", "nu pot vorbi", "slăbiciune în braț", "amorțeală bruscă"]
+        },
+        {
+          "id": "R04",
+          "name": "Loss of consciousness or seizure",
+          "keywords_en": ["fainted", "passed out", "unconscious", "seizure", "convulsions"],
+          "keywords_ro": ["a leșinat", "inconștient", "convulsii", "criză epileptică"]
+        },
+        {
+          "id": "R05",
+          "name": "Severe allergic reaction",
+          "keywords_en": ["swollen face", "swollen throat", "swollen tongue", "anaphylaxis", "hives and trouble breathing"],
+          "keywords_ro": ["față umflată", "gât umflat", "limbă umflată", "anafilaxie", "reacție alergică severă"]
+        },
+        {
+          "id": "R06",
+          "name": "Severe or uncontrolled bleeding",
+          "keywords_en": ["heavy bleeding", "bleeding won't stop", "vomiting blood", "coughing blood", "black tarry stool"],
+          "keywords_ro": ["sângerare abundentă", "sângerarea nu se oprește", "vărsături cu sânge", "tuse cu sânge", "scaun negru"]
+        },
+        {
+          "id": "R07",
+          "name": "Sudden worst headache of life or head injury with drowsiness or vomiting",
+          "keywords_en": ["worst headache of my life", "thunderclap headache", "head injury vomiting", "head injury drowsy"],
+          "keywords_ro": ["cea mai gravă durere de cap", "durere de cap bruscă și foarte puternică", "lovitură la cap cu vărsături", "lovitură la cap somnolență"]
+        },
+        {
+          "id": "R08",
+          "name": "Fever with stiff neck and rash",
+          "keywords_en": ["fever stiff neck", "fever and rash that does not fade", "neck stiffness and light sensitivity"],
+          "keywords_ro": ["febră și ceafă înțepenită", "febră și erupție care nu dispare", "sensibilitate la lumină și ceafă rigidă"]
+        },
+        {
+          "id": "R09",
+          "name": "Suspected poisoning or overdose",
+          "keywords_en": ["poisoning", "overdose", "swallowed chemicals", "took too many pills"],
+          "keywords_ro": ["intoxicație", "supradoză", "a înghițit substanțe chimice", "a luat prea multe pastile"]
+        },
+        {
+          "id": "R10",
+          "name": "Sudden vision loss or severe confusion",
+          "keywords_en": ["sudden vision loss", "cannot see", "very confused", "does not recognize people"],
+          "keywords_ro": ["pierderea bruscă a vederii", "nu văd", "confuzie severă", "nu recunoaște persoanele"]
+        },
+        {
+          "id": "R11",
+          "name": "Severe abdominal pain with hard belly, or pain in pregnancy with bleeding",
+          "keywords_en": ["severe stomach pain", "rigid abdomen", "pregnant and bleeding", "pregnant severe pain"],
+          "keywords_ro": ["durere abdominală severă", "abdomen foarte tare", "gravidă cu sângerare", "gravidă durere puternică"]
+        },
+        {
+          "id": "R12",
+          "name": "Fever in a baby under 3 months",
+          "keywords_en": ["newborn fever", "baby under 3 months fever"],
+          "keywords_ro": ["febră la nou-născut", "bebeluș sub 3 luni cu febră"]
+        },
+        {
+          "id": "R13",
+          "name": "Thoughts of suicide or self-harm",
+          "keywords_en": ["want to die", "suicide", "kill myself", "hurt myself"],
+          "keywords_ro": ["vreau să mor", "sinucidere", "să mă omor", "să mă rănesc"],
+          "note": "Show a caring message, advise calling 112 or talking to someone trusted right now. Do not suggest any medicine."
+        },
+        {
+          "id": "R14",
+          "name": "Severe burns",
+          "keywords_en": ["large burn", "burn on face", "deep burn", "chemical burn"],
+          "keywords_ro": ["arsură întinsă", "arsură pe față", "arsură profundă", "arsură chimică"]
+        }
+      ]
+    },
+    "yellow": {
+      "color": "yellow",
+      "action": "suggest_otc_and_recommend_doctor",
+      "pharmacy_suggestion": true,
+      "show_doctor_booking": true,
+      "ui_message_en": "You may take something for relief, but a doctor should check these symptoms. Do you want me to look for a clinic or book an appointment?",
+      "ui_message_ro": "Poți lua ceva pentru ameliorare, dar un medic ar trebui să te consulte. Vrei să caut o clinică sau să faci o programare?",
+      "otc_rule": "Only suggest OTC products if the user already knows the cause (for example a known migraine or a known allergy). If the cause is unknown, recommend the doctor first.",
+      "symptoms": [
+        {
+          "id": "Y01",
+          "name": "Fever lasting more than 3 days, or above 39 C",
+          "keywords_en": ["fever for days", "high fever", "fever 39", "fever 40"],
+          "keywords_ro": ["febră de câteva zile", "febră mare", "febră 39", "febră 40"],
+          "suggested_specialty": "family_medicine"
+        },
+        {
+          "id": "Y02",
+          "name": "Cough lasting more than 2 weeks",
+          "keywords_en": ["cough for weeks", "long cough", "persistent cough"],
+          "keywords_ro": ["tuse de săptămâni", "tuse persistentă", "tuse prelungită"],
+          "suggested_specialty": "pulmonology"
+        },
+        {
+          "id": "Y03",
+          "name": "Sore throat with fever or lasting more than 5 days",
+          "keywords_en": ["sore throat with fever", "throat pain for days", "white spots on tonsils"],
+          "keywords_ro": ["durere în gât cu febră", "durere în gât de zile", "puncte albe pe amigdale"],
+          "suggested_specialty": "ent"
+        },
+        {
+          "id": "Y04",
+          "name": "Ear pain or discharge from the ear",
+          "keywords_en": ["ear pain", "earache", "ear discharge"],
+          "keywords_ro": ["durere de ureche", "otită", "secreție din ureche"],
+          "suggested_specialty": "ent"
+        },
+        {
+          "id": "Y05",
+          "name": "Burning when urinating or frequent urination",
+          "keywords_en": ["burning urination", "painful urination", "frequent urination"],
+          "keywords_ro": ["arsură la urinare", "urinare dureroasă", "urinări frecvente"],
+          "suggested_specialty": "family_medicine"
+        },
+        {
+          "id": "Y06",
+          "name": "Diarrhea longer than 2 days, or with blood",
+          "keywords_en": ["diarrhea for days", "bloody diarrhea", "blood in stool"],
+          "keywords_ro": ["diaree de zile", "diaree cu sânge", "sânge în scaun"],
+          "suggested_specialty": "gastroenterology"
+        },
+        {
+          "id": "Y07",
+          "name": "Vomiting longer than 24 hours or signs of dehydration",
+          "keywords_en": ["vomiting all day", "cannot keep water down", "very thirsty and dizzy"],
+          "keywords_ro": ["vărsături toată ziua", "nu pot reține apă", "foarte însetat și amețit"],
+          "suggested_specialty": "family_medicine"
+        },
+        {
+          "id": "Y08",
+          "name": "Rash that spreads, blisters, or comes with itching for days",
+          "keywords_en": ["spreading rash", "blisters", "rash for days"],
+          "keywords_ro": ["erupție care se extinde", "basici", "erupție de zile"],
+          "suggested_specialty": "dermatology"
+        },
+        {
+          "id": "Y09",
+          "name": "Recurring or worsening headaches",
+          "keywords_en": ["headaches every day", "headache getting worse", "frequent migraines"],
+          "keywords_ro": ["dureri de cap zilnice", "durere de cap care se agravează", "migrene frecvente"],
+          "suggested_specialty": "neurology"
+        },
+        {
+          "id": "Y10",
+          "name": "Pain after an injury, swelling, or trouble moving a joint",
+          "keywords_en": ["swollen ankle", "pain after fall", "cannot move knee", "sprain"],
+          "keywords_ro": ["gleznă umflată", "durere după cădere", "nu pot mișca genunchiul", "entorsă"],
+          "suggested_specialty": "orthopedics"
+        },
+        {
+          "id": "Y11",
+          "name": "Red, painful eye or vision changes",
+          "keywords_en": ["red eye with pain", "blurred vision", "eye discharge"],
+          "keywords_ro": ["ochi roșu cu durere", "vedere încețoșată", "secreție la ochi"],
+          "suggested_specialty": "ophthalmology"
+        },
+        {
+          "id": "Y12",
+          "name": "Persistent stomach pain or heartburn longer than 2 weeks",
+          "keywords_en": ["stomach pain for weeks", "heartburn for weeks", "pain after eating"],
+          "keywords_ro": ["durere de stomac de săptămâni", "arsuri de săptămâni", "durere după masă"],
+          "suggested_specialty": "gastroenterology"
+        },
+        {
+          "id": "Y13",
+          "name": "Unexplained weight loss, extreme tiredness, or night sweats",
+          "keywords_en": ["losing weight without trying", "always exhausted", "night sweats"],
+          "keywords_ro": ["slăbesc fără motiv", "oboseală extremă", "transpirații nocturne"],
+          "suggested_specialty": "family_medicine"
+        },
+        {
+          "id": "Y14",
+          "name": "Any fever in a child under 2 years",
+          "keywords_en": ["baby fever", "toddler fever", "child under 2 fever"],
+          "keywords_ro": ["febră la bebeluș", "febră la copil mic", "copil sub 2 ani cu febră"],
+          "suggested_specialty": "pediatrics",
+          "note": "Do not suggest OTC products without a doctor. Recommend a pediatrician."
+        },
+        {
+          "id": "Y15",
+          "name": "Symptoms during pregnancy or breastfeeding",
+          "keywords_en": ["pregnant", "breastfeeding"],
+          "keywords_ro": ["însărcinată", "gravidă", "alăptez"],
+          "suggested_specialty": "obstetrics_gynecology",
+          "note": "Do not suggest OTC products without a doctor."
+        }
+      ]
+    },
+    "green": {
+      "color": "green",
+      "action": "suggest_otc_from_pharmacy",
+      "pharmacy_suggestion": true,
+      "show_doctor_booking": false,
+      "ui_message_en": "This looks mild. Here are over-the-counter options and pharmacies nearby that have them. If it gets worse or lasts longer, see a doctor.",
+      "ui_message_ro": "Pare o problemă ușoară. Iată variante fără rețetă și farmaciile din apropiere care le au. Dacă se agravează sau durează mai mult, mergi la medic.",
+      "symptoms": [
+        {
+          "id": "G01",
+          "name": "Mild occasional headache",
+          "keywords_en": ["mild headache", "slight headache", "tension headache"],
+          "keywords_ro": ["durere de cap ușoară", "cefalee de tensiune"],
+          "max_days": 2,
+          "otc_category": "analgesic_antipyretic"
+        },
+        {
+          "id": "G02",
+          "name": "Runny or stuffy nose, common cold",
+          "keywords_en": ["runny nose", "stuffy nose", "cold", "sneezing"],
+          "keywords_ro": ["nas care curge", "nas înfundat", "răceală", "strănut"],
+          "max_days": 7,
+          "otc_category": "nasal_decongestant_or_cold_relief"
+        },
+        {
+          "id": "G03",
+          "name": "Mild sore throat",
+          "keywords_en": ["mild sore throat", "scratchy throat"],
+          "keywords_ro": ["durere ușoară în gât", "gât iritat"],
+          "max_days": 3,
+          "otc_category": "throat_lozenges"
+        },
+        {
+          "id": "G04",
+          "name": "Mild dry or wet cough",
+          "keywords_en": ["mild cough", "dry cough", "tickly cough"],
+          "keywords_ro": ["tuse ușoară", "tuse uscată", "tuse productivă ușoară"],
+          "max_days": 7,
+          "otc_category": "cough_relief"
+        },
+        {
+          "id": "G05",
+          "name": "Mild muscle ache",
+          "keywords_en": ["muscle ache", "sore muscles", "mild back pain"],
+          "keywords_ro": ["dureri musculare", "mușchi încordați", "durere ușoară de spate"],
+          "max_days": 5,
+          "otc_category": "topical_pain_relief_or_analgesic"
+        },
+        {
+          "id": "G06",
+          "name": "Occasional heartburn or indigestion",
+          "keywords_en": ["heartburn", "indigestion", "bloating after meal"],
+          "keywords_ro": ["arsuri la stomac", "indigestie", "balonare după masă"],
+          "max_days": 3,
+          "otc_category": "antacid"
+        },
+        {
+          "id": "G07",
+          "name": "Mild seasonal allergy",
+          "keywords_en": ["itchy eyes", "seasonal allergy", "hay fever"],
+          "keywords_ro": ["ochi care mănâncă", "alergie sezonieră", "alergie la polen"],
+          "max_days": 7,
+          "otc_category": "antihistamine"
+        },
+        {
+          "id": "G08",
+          "name": "Minor cut or scrape",
+          "keywords_en": ["small cut", "scrape", "minor wound"],
+          "keywords_ro": ["tăietură mică", "julitură", "rană mică"],
+          "max_days": 3,
+          "otc_category": "antiseptic_and_bandage"
+        },
+        {
+          "id": "G09",
+          "name": "Mild constipation",
+          "keywords_en": ["constipation", "hard stool"],
+          "keywords_ro": ["constipație", "scaun dur"],
+          "max_days": 3,
+          "otc_category": "mild_laxative_or_fiber"
+        },
+        {
+          "id": "G10",
+          "name": "Mild diarrhea for less than 24 hours",
+          "keywords_en": ["mild diarrhea", "loose stool"],
+          "keywords_ro": ["diaree ușoară", "scaun moale"],
+          "max_days": 1,
+          "otc_category": "oral_rehydration_salts"
+        },
+        {
+          "id": "G11",
+          "name": "Insect bite or mild sunburn",
+          "keywords_en": ["insect bite", "mosquito bite", "mild sunburn"],
+          "keywords_ro": ["mușcătură de insectă", "înțepătură de țânțar", "arsură solară ușoară"],
+          "max_days": 3,
+          "otc_category": "soothing_cream"
+        },
+        {
+          "id": "G12",
+          "name": "Known mild menstrual cramps",
+          "keywords_en": ["period cramps", "menstrual pain"],
+          "keywords_ro": ["crampe menstruale", "durere menstruală"],
+          "max_days": 3,
+          "otc_category": "analgesic_antispasmodic"
+        },
+        {
+          "id": "G13",
+          "name": "Dry skin or chapped lips",
+          "keywords_en": ["dry skin", "chapped lips"],
+          "keywords_ro": ["piele uscată", "buze crăpate"],
+          "max_days": 14,
+          "otc_category": "moisturizer"
+        }
+      ]
+    }
+  }
+}

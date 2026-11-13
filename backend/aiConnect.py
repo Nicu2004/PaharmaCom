@@ -1,3 +1,4 @@
+
 from ollama import Client
 
 client = Client(host='http://10.123.4.5:11434', headers={'x-some-header': 'some-value'})
@@ -21,3 +22,4 @@ def analyze_symptoms(text: str) -> str:
   
 if __name__ == "__main__":
   print(analyze_symptoms("Am tuse de doua zile."))
+
