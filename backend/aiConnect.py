@@ -5,17 +5,22 @@ client = Client(host='http://10.123.4.5:11434', headers={'x-some-header': 'some-
 
 def analyze_symptoms(text: str) -> str:
     response = client.chat(
-        model="qwen3.5:4b",
+        model="gemma3:12b",
         messages=[
             {
                 "role": "system",
                 "content": (
-                    "Summarize the symptoms reported by the user in Romanian. "
-                    "Do not diagnose, recommend medicines, or invent details."
+                    "Summarize the symptoms reported by the user in Romanian with a clean format and without English translation."
+                    "Make a diagnose, recommend medicines, or invent details."
                 ),
             },
             {"role": "user", "content": text},
+
         ],
+        options = {
+            'num_predict': 1000,
+            'num_ctx': 2048
+        }
     )
     return response.message.content or ""
   
