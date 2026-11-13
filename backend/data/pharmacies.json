@@ -1,0 +1,959 @@
+{
+  "city": "Timișoara",
+  "pharmacies": [
+    {
+      "id": 477200230,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7744922,
+      "lon": 21.2221862,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 500010749,
+      "name": "Farmacia Roz",
+      "brand": null,
+      "lat": 45.7483472,
+      "lon": 21.2180808,
+      "address": "Strada Miron Costin 1",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-14:00"
+    },
+    {
+      "id": 501592052,
+      "name": "Vlavar Med",
+      "brand": null,
+      "lat": 45.7666616,
+      "lon": 21.2210722,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 501592755,
+      "name": "Dacia",
+      "brand": null,
+      "lat": 45.7644502,
+      "lon": 21.2200668,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:30-16:30"
+    },
+    {
+      "id": 513119066,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7747521,
+      "lon": 21.2222293,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1178133586,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7342678,
+      "lon": 21.2381272,
+      "address": "Strada Martir Ioan Stanciu 2",
+      "opening_hours": null
+    },
+    {
+      "id": 1204369300,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7649462,
+      "lon": 21.2189542,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-17:00"
+    },
+    {
+      "id": 1214458140,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7646078,
+      "lon": 21.219316,
+      "address": "Strada Burebista",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 09:00-17:00"
+    },
+    {
+      "id": 1221380425,
+      "name": "Farmacia Dacia",
+      "brand": null,
+      "lat": 45.7636561,
+      "lon": 21.2191872,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1234050821,
+      "name": "Mihai Viteazul",
+      "brand": null,
+      "lat": 45.7441729,
+      "lon": 21.2250708,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1264076923,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7656277,
+      "lon": 21.2602816,
+      "address": "Bulevardul Simion Bărnuțiu 79",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 1264076924,
+      "name": "Farmacia Catena",
+      "brand": null,
+      "lat": 45.762249,
+      "lon": 21.2475728,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1264076926,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7621415,
+      "lon": 21.2476305,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1264076938,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.75648,
+      "lon": 21.2555221,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1568894377,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7623295,
+      "lon": 21.2131744,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1639214959,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7623187,
+      "lon": 21.2607601,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 1785824719,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7650971,
+      "lon": 21.2189536,
+      "address": "Strada Burebista",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-16:00; Su 09:00-14:00"
+    },
+    {
+      "id": 2034520178,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7740222,
+      "lon": 21.2309323,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 2237142265,
+      "name": "Farmado",
+      "brand": null,
+      "lat": 45.7527922,
+      "lon": 21.2248716,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa,Su 09:00-20:00"
+    },
+    {
+      "id": 2237174599,
+      "name": "Farmacia Vlad",
+      "brand": null,
+      "lat": 45.7403897,
+      "lon": 21.2112107,
+      "address": "Bulevardul 16 Decembrie 1989 51",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 2300238239,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7593693,
+      "lon": 21.24958,
+      "address": "Strada Dacilor 10",
+      "opening_hours": null
+    },
+    {
+      "id": 3100433059,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7451686,
+      "lon": 21.2420915,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:00-22:00; Sa 08:00-22:00; Su 08:00-16:00"
+    },
+    {
+      "id": 3191753855,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7322311,
+      "lon": 21.2589074,
+      "address": "",
+      "opening_hours": "Mo-Su 09:00-18:00"
+    },
+    {
+      "id": 3191762883,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7321384,
+      "lon": 21.2595399,
+      "address": "Calea Buziașului 1",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 3191765161,
+      "name": "Apothecaria",
+      "brand": null,
+      "lat": 45.7321207,
+      "lon": 21.2592484,
+      "address": "Calea Buziașului",
+      "opening_hours": "Mo-Su 09:00-20:00"
+    },
+    {
+      "id": 4187333977,
+      "name": "Imedas",
+      "brand": null,
+      "lat": 45.7310574,
+      "lon": 21.2563379,
+      "address": "Strada Venus 23",
+      "opening_hours": null
+    },
+    {
+      "id": 4189305190,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7319918,
+      "lon": 21.2335263,
+      "address": "Strada Mareșal Alexandru Averescu 53",
+      "opening_hours": null
+    },
+    {
+      "id": 4189723594,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7339933,
+      "lon": 21.2503737,
+      "address": "Strada Aștrilor 20 - 26",
+      "opening_hours": null
+    },
+    {
+      "id": 4190729002,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7285849,
+      "lon": 21.2062107,
+      "address": "Calea Șagului 55A",
+      "opening_hours": null
+    },
+    {
+      "id": 4205191989,
+      "name": "Farmacia Granathalma",
+      "brand": null,
+      "lat": 45.731876,
+      "lon": 21.2288524,
+      "address": "Strada Mareșal Alexandru Averescu 70",
+      "opening_hours": null
+    },
+    {
+      "id": 4276473009,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7340245,
+      "lon": 21.2375157,
+      "address": "Calea Martirilor 1989 62",
+      "opening_hours": null
+    },
+    {
+      "id": 4276509561,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7347299,
+      "lon": 21.2375518,
+      "address": "Calea Martirilor 1989 60",
+      "opening_hours": null
+    },
+    {
+      "id": 4276535195,
+      "name": "Arcatim",
+      "brand": null,
+      "lat": 45.7491914,
+      "lon": 21.2430789,
+      "address": "Strada Daliei 8",
+      "opening_hours": null
+    },
+    {
+      "id": 4277123914,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7687793,
+      "lon": 21.2602925,
+      "address": "Strada Gheorghe Adam 13",
+      "opening_hours": "Mo-Fr 08:00-17:00; Sa 09:00-19:00"
+    },
+    {
+      "id": 4282920368,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.777633,
+      "lon": 21.2343111,
+      "address": "Calea Sever Bocu 82",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 4486959690,
+      "name": "Dianthus",
+      "brand": null,
+      "lat": 45.7560415,
+      "lon": 21.2277254,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:30-20:00; Sa 08:00-15:00"
+    },
+    {
+      "id": 4496768117,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7519029,
+      "lon": 21.2252595,
+      "address": "",
+      "opening_hours": "Mo-Fr 09:00-21:00; Sa 10:00-21:00; Su 10:00-20:00"
+    },
+    {
+      "id": 4637341175,
+      "name": "Farmelia",
+      "brand": null,
+      "lat": 45.7609655,
+      "lon": 21.240208,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 4887993825,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7564512,
+      "lon": 21.2230536,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-17:00; Su 08:00-15:00"
+    },
+    {
+      "id": 4953009592,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7531781,
+      "lon": 21.2250733,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa,Su 09:00-18:00"
+    },
+    {
+      "id": 4953009595,
+      "name": "Secom",
+      "brand": null,
+      "lat": 45.754,
+      "lon": 21.226645,
+      "address": "Piața Iancu Huniade 2",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 10:00-14:00"
+    },
+    {
+      "id": 5169044359,
+      "name": "Farmacia Tonica",
+      "brand": null,
+      "lat": 45.7620754,
+      "lon": 21.2476618,
+      "address": "Piața Badea Cârțan 7",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-17:00; Su 09:00-13:00"
+    },
+    {
+      "id": 5184053749,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7448655,
+      "lon": 21.2101417,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 09:00-15:00"
+    },
+    {
+      "id": 5184053750,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7445286,
+      "lon": 21.2084867,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:00-21:00; Sa 08:00-18:00; Su 08:00-16:00"
+    },
+    {
+      "id": 5184053751,
+      "name": "Christian",
+      "brand": null,
+      "lat": 45.74442,
+      "lon": 21.2085189,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:30-20:00; Sa 08:00-16:00"
+    },
+    {
+      "id": 5184096081,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7258842,
+      "lon": 21.1985871,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 5184115354,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7415652,
+      "lon": 21.2249679,
+      "address": "Strada Ciprian Porumbescu 7-8",
+      "opening_hours": "Mo-Fr 07:00-21:30; Sa 08:00-18:00; Su 08:00-16:00"
+    },
+    {
+      "id": 5195785925,
+      "name": "Remedio",
+      "brand": null,
+      "lat": 45.7618329,
+      "lon": 21.2353884,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 5195796666,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7606075,
+      "lon": 21.2175925,
+      "address": "",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 5195796670,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7622991,
+      "lon": 21.2132486,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 5197819158,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7590825,
+      "lon": 21.228417,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 09:00-16:00; Su 09:00-14:00"
+    },
+    {
+      "id": 5211433061,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7322926,
+      "lon": 21.2083303,
+      "address": "Calea Șagului",
+      "opening_hours": null
+    },
+    {
+      "id": 5212668059,
+      "name": "Farmacia Maledas",
+      "brand": null,
+      "lat": 45.7305965,
+      "lon": 21.2095273,
+      "address": "Strada Mureș 1",
+      "opening_hours": "Mo-Fr 08:00-20:00; Fr 08:00-14:00"
+    },
+    {
+      "id": 5212676441,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7307767,
+      "lon": 21.2093024,
+      "address": "Strada Mureș 1",
+      "opening_hours": null
+    },
+    {
+      "id": 5212688412,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7307199,
+      "lon": 21.2091212,
+      "address": "Strada Mureș 1C",
+      "opening_hours": "Mo-Fr 07:00-21:30; Sa 07:30-19:30; Su 08:00-16:00"
+    },
+    {
+      "id": 5224522172,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7574555,
+      "lon": 21.2288468,
+      "address": "Strada Florimund Mercy 9",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-16:00; Su 09:00-13:00"
+    },
+    {
+      "id": 5224538279,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7521094,
+      "lon": 21.2253774,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-22:00; Sa 09:00-20:30; Su 10:00-18:00"
+    },
+    {
+      "id": 5528176065,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7626573,
+      "lon": 21.2123086,
+      "address": "Strada Gheorghe Lazăr 42",
+      "opening_hours": null
+    },
+    {
+      "id": 6033849639,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7604561,
+      "lon": 21.2197298,
+      "address": "",
+      "opening_hours": "Mo-Sa 08:00-21:00; Su 09:00-21:00"
+    },
+    {
+      "id": 6320416598,
+      "name": "Farmado",
+      "brand": null,
+      "lat": 45.7342648,
+      "lon": 21.2469728,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 6529840195,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.728497,
+      "lon": 21.2046538,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 6804666939,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7451679,
+      "lon": 21.2088519,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:30-21:00; Sa 08:00-18:00; Su 09:00-14:00"
+    },
+    {
+      "id": 6888684542,
+      "name": "Farmacia Richter",
+      "brand": null,
+      "lat": 45.7284393,
+      "lon": 21.2360593,
+      "address": "Calea Martirilor 1989 98",
+      "opening_hours": null
+    },
+    {
+      "id": 6888728505,
+      "name": "Farmado",
+      "brand": null,
+      "lat": 45.7582858,
+      "lon": 21.222602,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:30-19:30; Sa 09:00-15:00"
+    },
+    {
+      "id": 6927149032,
+      "name": "Farmacia Vlad",
+      "brand": null,
+      "lat": 45.7578,
+      "lon": 21.2254258,
+      "address": "",
+      "opening_hours": "24/7"
+    },
+    {
+      "id": 6930125079,
+      "name": "Farmacia Remedia",
+      "brand": null,
+      "lat": 45.7557798,
+      "lon": 21.2344753,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 6948122724,
+      "name": "Medimfarm",
+      "brand": null,
+      "lat": 45.7557705,
+      "lon": 21.2292336,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 09:00-14:00"
+    },
+    {
+      "id": 6959616660,
+      "name": "Karim Pharm",
+      "brand": null,
+      "lat": 45.7381978,
+      "lon": 21.2379823,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 6989259904,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7582914,
+      "lon": 21.2089831,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-16:00; Su 09:00-14:00"
+    },
+    {
+      "id": 7021617472,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.740846,
+      "lon": 21.2255147,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 7049224565,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7605553,
+      "lon": 21.2177447,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa,Su 09:00-18:00"
+    },
+    {
+      "id": 7110109849,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7658621,
+      "lon": 21.2292589,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053710,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7341236,
+      "lon": 21.237525,
+      "address": "Calea Martirilor 1989 62",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa-Su 08:00-18:00"
+    },
+    {
+      "id": 7214053712,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7337449,
+      "lon": 21.2014302,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053713,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7464422,
+      "lon": 21.2151698,
+      "address": "Strada Emanoil Gojdu 2",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053714,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7497645,
+      "lon": 21.2076835,
+      "address": "Bulevardul General Ion Dragalina 45",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053715,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7538813,
+      "lon": 21.2214983,
+      "address": "Piața Regina Maria 2",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-14:00"
+    },
+    {
+      "id": 7214053716,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7435121,
+      "lon": 21.2430461,
+      "address": "Aleea F.C. Ripensia 29",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-18:00; Su 09:00-18:00"
+    },
+    {
+      "id": 7214053717,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7613074,
+      "lon": 21.2158221,
+      "address": "Strada Gheorghe Lazăr 36",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-14:00"
+    },
+    {
+      "id": 7214053718,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7662993,
+      "lon": 21.2604178,
+      "address": "Strada Telegrafului 99",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 09:00-16:00"
+    },
+    {
+      "id": 7214053719,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7321005,
+      "lon": 21.20815,
+      "address": "Calea Șagului 24",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053720,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.728015,
+      "lon": 21.2045199,
+      "address": "Calea Șagului 72-78",
+      "opening_hours": null
+    },
+    {
+      "id": 7214053721,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7701612,
+      "lon": 21.218592,
+      "address": "Aleea Hotinului 2",
+      "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-14:00"
+    },
+    {
+      "id": 7214053722,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7705338,
+      "lon": 21.2181726,
+      "address": "Aleea Hotinului 2",
+      "opening_hours": null
+    },
+    {
+      "id": 7214583175,
+      "name": "Farmacia Roz",
+      "brand": null,
+      "lat": 45.7502656,
+      "lon": 21.2073845,
+      "address": "Bulevardul General Ion Dragalina",
+      "opening_hours": null
+    },
+    {
+      "id": 7215973153,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7672944,
+      "lon": 21.2276918,
+      "address": "",
+      "opening_hours": "Mo-Su 10:00-22:00"
+    },
+    {
+      "id": 7265756073,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7857297,
+      "lon": 21.2207951,
+      "address": "",
+      "opening_hours": "Mo-Su 09:00-21:00"
+    },
+    {
+      "id": 7888056076,
+      "name": "Drogheria Academică",
+      "brand": null,
+      "lat": 45.7557898,
+      "lon": 21.2343292,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 8009754556,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7777983,
+      "lon": 21.2351922,
+      "address": "Strada Perlei 16A",
+      "opening_hours": null
+    },
+    {
+      "id": 8151079420,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7630131,
+      "lon": 21.2486744,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 8628418394,
+      "name": "Farmacia Dona",
+      "brand": "Farmacia Dona",
+      "lat": 45.7341974,
+      "lon": 21.2008533,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 9162093286,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7607539,
+      "lon": 21.2424677,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 9314795510,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.727706,
+      "lon": 21.2357193,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 9431306150,
+      "name": "Minunea naturii",
+      "brand": null,
+      "lat": 45.7743116,
+      "lon": 21.2416859,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 9735819410,
+      "name": "Drogheria Beratco",
+      "brand": null,
+      "lat": 45.7739122,
+      "lon": 21.2386805,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 9949650755,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7400077,
+      "lon": 21.1965817,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 10125675882,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7681339,
+      "lon": 21.234633,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 10130167505,
+      "name": "Medimfarm",
+      "brand": null,
+      "lat": 45.758116,
+      "lon": 21.2262113,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-16:00"
+    },
+    {
+      "id": 10155256824,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7757243,
+      "lon": 21.2378591,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 12179772982,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.757215,
+      "lon": 21.2554526,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 12452704920,
+      "name": "Help Net",
+      "brand": "Help Net",
+      "lat": 45.7410151,
+      "lon": 21.2603266,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 13203075601,
+      "name": "Dr. Max",
+      "brand": "Dr. Max",
+      "lat": 45.7389827,
+      "lon": 21.2128412,
+      "address": "Strada Damaschin Bojincă 4",
+      "opening_hours": "Mo-Sa 09:00-21:00; Su 09:00-20:00"
+    },
+    {
+      "id": 13408942561,
+      "name": "Catena",
+      "brand": "Catena",
+      "lat": 45.7336781,
+      "lon": 21.2502841,
+      "address": "",
+      "opening_hours": null
+    },
+    {
+      "id": 13578087127,
+      "name": "Farmacia Tonica",
+      "brand": null,
+      "lat": 45.7629511,
+      "lon": 21.2483835,
+      "address": "",
+      "opening_hours": "Mo-Fr 07:00-20:00; Sa 08:00-17:00"
+    },
+    {
+      "id": 13578087128,
+      "name": "Fitofarmacie",
+      "brand": null,
+      "lat": 45.762907,
+      "lon": 21.2481523,
+      "address": "",
+      "opening_hours": "Mo-Fr 08:00-16:00"
+    },
+    {
+      "id": 134112313,
+      "name": "Farmacie",
+      "brand": null,
+      "lat": 45.7329537,
+      "lon": 21.208425,
+      "address": "",
+      "opening_hours": null
+    }
+  ]
+}
