@@ -32,12 +32,17 @@ def analyze_symptoms(text: str, images: List[str]) -> str:
             {
                 "role": "system",
                 "content": (
-                    "Summarize the symptoms reported by the user in Romanian. "
-                    "Do not diagnose, recommend medicines, or invent details."
+                    "Summarize the symptoms reported by the user in Romanian with a clean format and without English translation."
+                    "Make a diagnose, recommend medicines, or invent details."
                 ),
             },
             user_message,  # Insert the properly formatted dictionary here
+
         ],
+        options = {
+            'num_predict': 1000,
+            'num_ctx': 2048
+        }
     )
     return response.message.content or ""
   
