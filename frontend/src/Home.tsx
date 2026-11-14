@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Home.css";
+import UploadAndDisplayImage from "./components/UploadAndDisplayImage";
 
 type Level = "green" | "yellow" | "red";
 
@@ -26,54 +27,103 @@ interface Clinic {
   nextSlot: string;
 }
 
-// Date statice demo: înlocuiește-le mai târziu cu date reale din API / SQLite.
+interface Message {
+  id: string;
+  sender: "user" | "bot";
+  text: string;
+  image?: string; // data URI, shown as a thumbnail in the bubble
+  loading?: boolean; // true while waiting for the AI
+}
+
 const quickSymptoms: string[] = ["Durere de cap", "Tuse", "Durere în gât", "Nas înfundat", "Febră"];
 
 const triageLevels: TriageLevel[] = [
-  {
-    level: "green",
-    title: "Ușor",
-    text: "Îți arătăm medicamentele fără rețetă și farmaciile din apropiere care le au.",
-  },
-  {
-    level: "yellow",
-    title: "De verificat",
-    text: "Primești o sugestie pentru ameliorare și îți recomandăm un consult la medic.",
-  },
-  {
-    level: "red",
-    title: "Urgent",
-    text: "Te trimitem direct la 112, fără recomandări de medicamente.",
-  },
+  { level: "green", title: "Ușor", text: "Îți arătăm medicamentele fără rețetă și farmaciile din apropiere care le au." },
+  { level: "yellow", title: "De verificat", text: "Primești o sugestie pentru ameliorare și îți recomandăm un consult la medic." },
+  { level: "red", title: "Urgent", text: "Te trimitem direct la 112, fără recomandări de medicamente." },
 ];
 
 const pharmacies: Pharmacy[] = [
   { id: 1, name: "Farmacia Centru", street: "Bulevardul Take Ionescu 12", distance: "350 m", status: "Deschis până la 21:00", isOpen: true },
   { id: 2, name: "Farmacia Piața Unirii", street: "Piața Unirii 5", distance: "800 m", status: "Deschis non-stop", isOpen: true },
-  { id: 3, name: "Farmacia Iosefin", street: "Strada Gheorghe Lazăr 20", distance: "1,4 km", status: "Închis, deschide la 08:00", isOpen: false },
 ];
 
 const clinics: Clinic[] = [
   { id: 1, name: "Clinica Medicală Vest", specialty: "Medicină de familie", street: "Calea Aradului 40", nextSlot: "Mâine, 10:30" },
-  { id: 2, name: "Centrul ORL Timiș", specialty: "ORL", street: "Strada Mărășești 8", nextSlot: "Vineri, 14:00" },
 ];
 
 export default function Home() {
   const [symptoms, setSymptoms] = useState<string>("");
+  const [imagePayload, setImagePayload] = useState<string | null>(null);
+  const [conversation, setConversation] = useState<Message[]>([]);
+  const [uploadKey, setUploadKey] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const historyRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Scroll only the chat box, not the whole page
+  useEffect(() => {
+    const el = historyRef.current;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [conversation]);
+
+  const canSend = (symptoms.trim().length > 0 || imagePayload !== null) && !isLoading;
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: trimite textul către backend (triaj + recomandare).
-    console.log("Simptome:", symptoms);
+    if (!canSend) return;
+
+    const sentText = symptoms.trim();
+    const sentImage = imagePayload;
+    const loadingId = `loading-${Date.now()}`;
+
+    // Show the user's message plus a glowing "loading" bubble right away
+    setConversation((prev) => [
+      ...prev,
+      { id: `user-${Date.now()}`, sender: "user", text: sentText, image: sentImage ?? undefined },
+      { id: loadingId, sender: "bot", text: "Analizăm simptomele tale…", loading: true },
+    ]);
+
+    // Reset the inputs
+    setSymptoms("");
+    setImagePayload(null);
+    setUploadKey((k) => k + 1); // remounts the uploader, clearing its preview
+    setIsLoading(true);
+
+    // The backend expects `images: string[]`
+    const payload = {
+      symptoms: sentText,
+      images: sentImage ? [sentImage] : [],
+    };
+
+    let reply: string;
+    try {
+      const response = await fetch("http://localhost:8000/analyze_symptoms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      reply = data.analysis || "Nu am primit un răspuns valid de la AI.";
+    } catch (err) {
+      console.error(err);
+      reply = "Nu ne-am putut conecta la server. Încearcă din nou în câteva momente.";
+    }
+
+    // Swap the loading bubble for the real answer
+    setConversation((prev) =>
+      prev.map((m) => (m.id === loadingId ? { id: `bot-${Date.now()}`, sender: "bot", text: reply } : m))
+    );
+    setIsLoading(false);
   };
 
   return (
     <div className="home">
       <header className="home__top">
-        <span className="home__logo">Doccom</span>
-        <button type="button" className="home__location">
-          Timișoara
-        </button>
+        <span className="home__logo">{import.meta.env.VITE_APP_NAME}</span>
+        <button type="button" className="home__location">Timișoara</button>
       </header>
 
       <main className="home__main">
@@ -82,7 +132,24 @@ export default function Home() {
             Spune-ne ce simți. Îți arătăm unde să mergi.
           </h1>
 
-          <form className="hero__form" onSubmit={handleSubmit}>
+          {conversation.length > 0 && (
+            <div className="chat-history" ref={historyRef} aria-live="polite">
+              {conversation.map((msg) => (
+                <div key={msg.id} className={`chat-message chat-message--${msg.sender}`}>
+                  <div className={`chat-bubble${msg.loading ? " chat-bubble--loading" : ""}`}>
+                    {msg.image && <img className="chat-image" src={msg.image} alt="Imagine atașată" />}
+                    {msg.loading ? (
+                      <span className="glow-text">{msg.text}</span>
+                    ) : (
+                      msg.text && <p>{msg.text}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <form className="hero__form" ref={formRef} onSubmit={handleSubmit}>
             <label htmlFor="symptoms" className="hero__label">
               Descrie simptomele tale
             </label>
@@ -93,30 +160,44 @@ export default function Home() {
               placeholder="De exemplu: am dureri de cap de azi dimineață"
               value={symptoms}
               onChange={(e) => setSymptoms(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  formRef.current?.requestSubmit();
+                }
+              }}
             />
 
             <div className="hero__chips" role="group" aria-label="Simptome frecvente">
               {quickSymptoms.map((s) => (
-                <button key={s} type="button" className="chip" onClick={() => setSymptoms(s)}>
+                <button
+                  key={s}
+                  type="button"
+                  className="chip"
+                  onClick={() => setSymptoms((prev) => (prev ? `${prev}, ${s}` : s))}
+                >
                   {s}
                 </button>
               ))}
             </div>
 
-            <button type="submit" className="btn" disabled={symptoms.trim().length === 0}>
-              Verifică simptomele
+            <section className="hero__upload" aria-labelledby="upload-title">
+              <div>
+                <h2 id="upload-title" className="hero__upload-title">Adaugă o fotografie</h2>
+                <p className="hero__upload-description">O imagine ne poate ajuta să înțelegem mai bine simptomele.</p>
+              </div>
+
+              <UploadAndDisplayImage key={uploadKey} onImageReady={setImagePayload} />
+            </section>
+
+            <button type="submit" className="btn btn--submit" disabled={!canSend}>
+              {isLoading ? "Se analizează…" : "Verifică simptomele"}
             </button>
           </form>
-
-          <p className="hero__note">
-            Primești doar o recomandare, nu un diagnostic. Dacă e nevoie, mergi la medic.
-          </p>
         </section>
 
         <section className="triage" aria-labelledby="triage-title">
-          <h2 id="triage-title" className="section__title">
-            Cum te ajutăm
-          </h2>
+          <h2 id="triage-title" className="section__title">Cum te ajutăm</h2>
           <ul className="triage__list">
             {triageLevels.map((t) => (
               <li key={t.level} className={`triage__item triage__item--${t.level}`}>
@@ -129,9 +210,7 @@ export default function Home() {
 
         <div className="columns">
           <section aria-labelledby="pharm-title">
-            <h2 id="pharm-title" className="section__title">
-              Farmacii aproape de tine
-            </h2>
+            <h2 id="pharm-title" className="section__title">Farmacii aproape de tine</h2>
             <ul className="rows">
               {pharmacies.map((p) => (
                 <li key={p.id} className="row">
@@ -149,22 +228,16 @@ export default function Home() {
           </section>
 
           <section aria-labelledby="clinic-title">
-            <h2 id="clinic-title" className="section__title">
-              Clinici cu decontare CNAS
-            </h2>
+            <h2 id="clinic-title" className="section__title">Clinici cu decontare CNAS</h2>
             <ul className="rows">
               {clinics.map((c) => (
                 <li key={c.id} className="row">
                   <div className="row__main">
                     <p className="row__name">{c.name}</p>
-                    <p className="row__meta">
-                      {c.specialty}, {c.street}
-                    </p>
+                    <p className="row__meta">{c.specialty}, {c.street}</p>
                     <p className="row__status">Primul loc liber: {c.nextSlot}</p>
                   </div>
-                  <button type="button" className="btn btn--small">
-                    Programează-te
-                  </button>
+                  <button type="button" className="btn btn--small">Programează-te</button>
                 </li>
               ))}
             </ul>
@@ -172,9 +245,7 @@ export default function Home() {
         </div>
 
         <aside className="emergency">
-          <p>
-            Urgență? Sună la <a href="tel:112">112</a>.
-          </p>
+          <p>Urgență? Sună la <a href="tel:112">112</a>.</p>
         </aside>
       </main>
 

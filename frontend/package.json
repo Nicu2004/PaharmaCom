@@ -10,8 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@untitledui/file-icons": "^0.0.9",
+    "@untitledui/icons": "^0.0.23",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "lucide-react": "^1.72.0",
+    "motion": "^13.5.1",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-aria": "^3.53.1",
+    "react-aria-components": "^1.22.1",
+    "react-dom": "^19.3.1",
+    "react-images-uploading": "^3.1.7",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

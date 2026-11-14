@@ -8,10 +8,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 
 @RestController
+
 @RequestMapping("/api")
 public class TriageController {
 
@@ -56,7 +58,7 @@ public class TriageController {
     @GetMapping("/triage")
     public ResponseEntity<?> getTriageData(
             @RequestHeader(value = "Authorization", required = false) String authHeader,
-            @RequestParam(value = "token", required = false) String queryToken) {
+            @RequestParam(value = "token") String queryToken) {
 
 
 
@@ -80,4 +82,12 @@ public class TriageController {
         List<SymptomTriageConfig> configs = triageRepository.findAll();
         return ResponseEntity.ok(configs);
     }
+    @PostMapping("/auth/code-verify")
+    public ResponseEntity<?> verify_code_user(@RequestBody Map<String, String> payload) {
+        String email = payload.get("email");
+        String code = payload.get("code");
+        System.out.println("The email is:"+email+"and =the code is: "+code);
+        return ResponseEntity.ok("Code is valid");
+    }
+
 }

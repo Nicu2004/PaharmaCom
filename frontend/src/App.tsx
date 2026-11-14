@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Home from "./Home";
+import AuthScreen from './auth/AuthScreen'
 
 function App() {
  
