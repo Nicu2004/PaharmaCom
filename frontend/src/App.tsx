@@ -8,7 +8,7 @@ import AuthScreen from './auth/AuthScreen'
 
 function App() {
  
-  return <Home />;
+  return <AuthScreen />;
 }
 
 

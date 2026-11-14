@@ -82,12 +82,4 @@ public class TriageController {
         List<SymptomTriageConfig> configs = triageRepository.findAll();
         return ResponseEntity.ok(configs);
     }
-    @PostMapping("/auth/code-verify")
-    public ResponseEntity<?> verify_code_user(@RequestBody Map<String, String> payload) {
-        String email = payload.get("email");
-        String code = payload.get("code");
-        System.out.println("The email is:"+email+"and =the code is: "+code);
-        return ResponseEntity.ok("Code is valid");
-    }
-
 }
