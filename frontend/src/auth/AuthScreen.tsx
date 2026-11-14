@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import './AuthScreen.css';
-import { useAuth, type AuthPayload } from './Authcontext';
+import { useAuth, type AuthPayload } from './AuthContext';
 
 export interface UserRegistrationPayload {
   lastName: string;

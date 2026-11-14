@@ -1,0 +1,182 @@
+/* Uses the colour tokens from Home.css (--brand, --surface, --tint, ...) */
+
+.pharm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.pharm__title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* ---------- Controls ---------- */
+.pharm-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.pharm-controls__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pharm-controls__label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.pharm-controls__value {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.pharm-controls input[type='range'] {
+  width: 100%;
+  accent-color: var(--brand);
+}
+
+.pharm-controls__hint {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.pharm-controls__hint button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pharm-controls__hint button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Map ---------- */
+.pharm-map {
+  position: relative;
+  isolation: isolate; /* keeps Leaflet's high z-indexes below the bottom nav */
+  height: min(62vh, 480px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: var(--tint-strong);
+}
+
+.pharm-map .leaflet-container {
+  height: 100%;
+  width: 100%;
+  font-family: var(--body);
+}
+
+.pharm-pin {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: #ffffff;
+  font: 700 15px/1 var(--display);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pharm-pin--in {
+  background: var(--brand);
+}
+
+.pharm-pin--out {
+  background: #8aa19c;
+}
+
+.pharm-you {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2f6fed;
+  box-shadow: 0 0 0 5px rgba(47, 111, 237, 0.28);
+}
+
+.pharm-popup__name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.pharm-popup__meta {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- List ---------- */
+.pharm-list__title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.pharm-list__empty {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  color: var(--muted);
+}
+
+.pharm-list__item {
+  list-style: none;
+}
+
+.pharm-row {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.pharm-row:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lift);
+}
+
+.pharm-status {
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  color: var(--muted);
+}
+
+.pharm-status--error {
+  background: #fdeceb;
+  color: #a3332e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pharm-row {
+    transition: none;
+  }
+}

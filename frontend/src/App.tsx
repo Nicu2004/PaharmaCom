@@ -1,7 +1,7 @@
 import './App.css';
-import Home from './Home';
+import AppShell from './AppSchell/AppShell';
 import AuthScreen from './auth/AuthScreen';
-import { AuthProvider, useAuth } from './auth/Authcontext';
+import { AuthProvider, useAuth } from './auth/AuthContext';
 
 // Everything behind the login lives here: signed out -> login screen, signed in -> the app.
 function Gate() {
@@ -16,7 +16,7 @@ function Gate() {
     );
   }
 
-  return status === 'authenticated' ? <Home /> : <AuthScreen />;
+  return status === 'authenticated' ? <AppShell /> : <AuthScreen />;
 }
 
 function App() {

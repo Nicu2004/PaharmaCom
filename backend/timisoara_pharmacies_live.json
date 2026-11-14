@@ -1,0 +1,947 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7744922,
+    "lng": 21.2221862,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 2,
+    "name": "Farmacia Roz",
+    "street": "Strada Miron Costin 1",
+    "lat": 45.7483472,
+    "lng": 21.2180808,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 3,
+    "name": "Vlavar Med",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7666616,
+    "lng": 21.2210722,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 4,
+    "name": "Dacia",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7644502,
+    "lng": 21.2200668,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7747521,
+    "lng": 21.2222293,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 6,
+    "name": "Help Net",
+    "street": "Strada Martir Ioan Stanciu 2",
+    "lat": 45.7342678,
+    "lng": 21.2381272,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7649462,
+    "lng": 21.2189542,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 8,
+    "name": "Help Net",
+    "street": "Strada Burebista",
+    "lat": 45.7646078,
+    "lng": 21.219316,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 9,
+    "name": "Farmacia Dacia",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7636561,
+    "lng": 21.2191872,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 10,
+    "name": "Mihai Viteazul",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7441729,
+    "lng": 21.2250708,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 11,
+    "name": "Farmacia Dona",
+    "street": "Bulevardul Simion Bărnuțiu 79",
+    "lat": 45.7656277,
+    "lng": 21.2602816,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 12,
+    "name": "Farmacia Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.762249,
+    "lng": 21.2475728,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 13,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7621415,
+    "lng": 21.2476305,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 14,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.75648,
+    "lng": 21.2555221,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 15,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7623295,
+    "lng": 21.2131744,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 16,
+    "name": "Farmacie",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7623187,
+    "lng": 21.2607601,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 17,
+    "name": "Catena",
+    "street": "Strada Burebista",
+    "lat": 45.7650971,
+    "lng": 21.2189536,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 18,
+    "name": "Farmacie",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7740222,
+    "lng": 21.2309323,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 19,
+    "name": "Farmado",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7527922,
+    "lng": 21.2248716,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 20,
+    "name": "Farmacia Vlad",
+    "street": "Bulevardul 16 Decembrie 1989 51",
+    "lat": 45.7403897,
+    "lng": 21.2112107,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 21,
+    "name": "Help Net",
+    "street": "Strada Dacilor 10",
+    "lat": 45.7593693,
+    "lng": 21.24958,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 22,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7451686,
+    "lng": 21.2420915,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 23,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7322311,
+    "lng": 21.2589074,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 24,
+    "name": "Help Net",
+    "street": "Calea Buziașului 1",
+    "lat": 45.7321384,
+    "lng": 21.2595399,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 25,
+    "name": "Apothecaria",
+    "street": "Calea Buziașului",
+    "lat": 45.7321207,
+    "lng": 21.2592484,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 26,
+    "name": "Imedas",
+    "street": "Strada Venus 23",
+    "lat": 45.7310574,
+    "lng": 21.2563379,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 27,
+    "name": "Farmacia Dona",
+    "street": "Strada Mareșal Alexandru Averescu 53",
+    "lat": 45.7319918,
+    "lng": 21.2335263,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 28,
+    "name": "Help Net",
+    "street": "Strada Aștrilor 20 - 26",
+    "lat": 45.7339933,
+    "lng": 21.2503737,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 29,
+    "name": "Catena",
+    "street": "Calea Șagului 55A",
+    "lat": 45.7285849,
+    "lng": 21.2062107,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 30,
+    "name": "Farmacia Granathalma",
+    "street": "Strada Mareșal Alexandru Averescu 70",
+    "lat": 45.731876,
+    "lng": 21.2288524,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 31,
+    "name": "Farmacia Dona",
+    "street": "Calea Martirilor 1989 62",
+    "lat": 45.7340245,
+    "lng": 21.2375157,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 32,
+    "name": "Catena",
+    "street": "Calea Martirilor 1989 60",
+    "lat": 45.7347299,
+    "lng": 21.2375518,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 33,
+    "name": "Arcatim",
+    "street": "Strada Daliei 8",
+    "lat": 45.7491914,
+    "lng": 21.2430789,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 34,
+    "name": "Dr. Max",
+    "street": "Strada Gheorghe Adam 13",
+    "lat": 45.7687793,
+    "lng": 21.2602925,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 35,
+    "name": "Farmacia Dona",
+    "street": "Calea Sever Bocu 82",
+    "lat": 45.777633,
+    "lng": 21.2343111,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 36,
+    "name": "Dianthus",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7560415,
+    "lng": 21.2277254,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 37,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7519029,
+    "lng": 21.2252595,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 38,
+    "name": "Farmelia",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7609655,
+    "lng": 21.240208,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 39,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7564512,
+    "lng": 21.2230536,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 40,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7531781,
+    "lng": 21.2250733,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 41,
+    "name": "Secom",
+    "street": "Piața Iancu Huniade 2",
+    "lat": 45.754,
+    "lng": 21.226645,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 42,
+    "name": "Farmacia Tonica",
+    "street": "Piața Badea Cârțan 7",
+    "lat": 45.7620754,
+    "lng": 21.2476618,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 43,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7448655,
+    "lng": 21.2101417,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 44,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7445286,
+    "lng": 21.2084867,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 45,
+    "name": "Christian",
+    "street": "Adresă indisponibilă",
+    "lat": 45.74442,
+    "lng": 21.2085189,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 46,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7258842,
+    "lng": 21.1985871,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 47,
+    "name": "Farmacia Dona",
+    "street": "Strada Ciprian Porumbescu 7-8",
+    "lat": 45.7415652,
+    "lng": 21.2249679,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 48,
+    "name": "Remedio",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7618329,
+    "lng": 21.2353884,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 49,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7606075,
+    "lng": 21.2175925,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 50,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7622991,
+    "lng": 21.2132486,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 51,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7590825,
+    "lng": 21.228417,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 52,
+    "name": "Help Net",
+    "street": "Calea Șagului",
+    "lat": 45.7322926,
+    "lng": 21.2083303,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 53,
+    "name": "Farmacia Maledas",
+    "street": "Strada Mureș 1",
+    "lat": 45.7305965,
+    "lng": 21.2095273,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 54,
+    "name": "Help Net",
+    "street": "Strada Mureș 1",
+    "lat": 45.7307767,
+    "lng": 21.2093024,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 55,
+    "name": "Farmacia Dona",
+    "street": "Strada Mureș 1C",
+    "lat": 45.7307199,
+    "lng": 21.2091212,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 56,
+    "name": "Catena",
+    "street": "Strada Florimund Mercy 9",
+    "lat": 45.7574555,
+    "lng": 21.2288468,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 57,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7521094,
+    "lng": 21.2253774,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 58,
+    "name": "Help Net",
+    "street": "Strada Gheorghe Lazăr 42",
+    "lat": 45.7626573,
+    "lng": 21.2123086,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 59,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7604561,
+    "lng": 21.2197298,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 60,
+    "name": "Farmado",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7342648,
+    "lng": 21.2469728,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 61,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.728497,
+    "lng": 21.2046538,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 62,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7451679,
+    "lng": 21.2088519,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 63,
+    "name": "Farmacia Richter",
+    "street": "Calea Martirilor 1989 98",
+    "lat": 45.7284393,
+    "lng": 21.2360593,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 64,
+    "name": "Farmado",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7582858,
+    "lng": 21.222602,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 65,
+    "name": "Farmacia Vlad",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7578,
+    "lng": 21.2254258,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 66,
+    "name": "Farmacia Remedia",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7557798,
+    "lng": 21.2344753,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 67,
+    "name": "Medimfarm",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7557705,
+    "lng": 21.2292336,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 68,
+    "name": "Karim Pharm",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7381978,
+    "lng": 21.2379823,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 69,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7582914,
+    "lng": 21.2089831,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 70,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.740846,
+    "lng": 21.2255147,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 71,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7605553,
+    "lng": 21.2177447,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 72,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7658621,
+    "lng": 21.2292589,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 73,
+    "name": "Dr. Max",
+    "street": "Calea Martirilor 1989 62",
+    "lat": 45.7341236,
+    "lng": 21.237525,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 74,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7337449,
+    "lng": 21.2014302,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 75,
+    "name": "Dr. Max",
+    "street": "Strada Emanoil Gojdu 2",
+    "lat": 45.7464422,
+    "lng": 21.2151698,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 76,
+    "name": "Dr. Max",
+    "street": "Bulevardul General Ion Dragalina 45",
+    "lat": 45.7497645,
+    "lng": 21.2076835,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 77,
+    "name": "Dr. Max",
+    "street": "Piața Regina Maria 2",
+    "lat": 45.7538813,
+    "lng": 21.2214983,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 78,
+    "name": "Dr. Max",
+    "street": "Aleea F.C. Ripensia 29",
+    "lat": 45.7435121,
+    "lng": 21.2430461,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 79,
+    "name": "Dr. Max",
+    "street": "Strada Gheorghe Lazăr 36",
+    "lat": 45.7613074,
+    "lng": 21.2158221,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 80,
+    "name": "Dr. Max",
+    "street": "Strada Telegrafului 99",
+    "lat": 45.7662993,
+    "lng": 21.2604178,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 81,
+    "name": "Dr. Max",
+    "street": "Calea Șagului 24",
+    "lat": 45.7321005,
+    "lng": 21.20815,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 82,
+    "name": "Dr. Max",
+    "street": "Calea Șagului 72-78",
+    "lat": 45.728015,
+    "lng": 21.2045199,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 83,
+    "name": "Dr. Max",
+    "street": "Aleea Hotinului 2",
+    "lat": 45.7701612,
+    "lng": 21.218592,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 84,
+    "name": "Catena",
+    "street": "Aleea Hotinului 2",
+    "lat": 45.7705338,
+    "lng": 21.2181726,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 85,
+    "name": "Farmacia Roz",
+    "street": "Bulevardul General Ion Dragalina",
+    "lat": 45.7502656,
+    "lng": 21.2073845,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 86,
+    "name": "Dr. Max",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7672944,
+    "lng": 21.2276918,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 87,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7857297,
+    "lng": 21.2207951,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 88,
+    "name": "Drogheria Academică",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7557898,
+    "lng": 21.2343292,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 89,
+    "name": "Catena",
+    "street": "Strada Perlei 16A",
+    "lat": 45.7777983,
+    "lng": 21.2351922,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 90,
+    "name": "Farmacie (Nume necunoscut)",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7630131,
+    "lng": 21.2486744,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 91,
+    "name": "Farmacia Dona",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7341974,
+    "lng": 21.2008533,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 92,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7607539,
+    "lng": 21.2424677,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 93,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.727706,
+    "lng": 21.2357193,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 94,
+    "name": "Minunea naturii",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7743116,
+    "lng": 21.2416859,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 95,
+    "name": "Drogheria Beratco",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7739122,
+    "lng": 21.2386805,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 96,
+    "name": "Farmacie (Nume necunoscut)",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7400077,
+    "lng": 21.1965817,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 97,
+    "name": "Farmacie (Nume necunoscut)",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7681339,
+    "lng": 21.234633,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 98,
+    "name": "Medimfarm",
+    "street": "Adresă indisponibilă",
+    "lat": 45.758116,
+    "lng": 21.2262113,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 99,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7757243,
+    "lng": 21.2378591,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 100,
+    "name": "Farmacie (Nume necunoscut)",
+    "street": "Adresă indisponibilă",
+    "lat": 45.757215,
+    "lng": 21.2554526,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 101,
+    "name": "Help Net",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7410151,
+    "lng": 21.2603266,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 102,
+    "name": "Dr. Max",
+    "street": "Strada Damaschin Bojincă 4",
+    "lat": 45.7389827,
+    "lng": 21.2128412,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 103,
+    "name": "Catena",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7336781,
+    "lng": 21.2502841,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 104,
+    "name": "Farmacia Tonica",
+    "street": "Adresă indisponibilă",
+    "lat": 45.7629511,
+    "lng": 21.2483835,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  },
+  {
+    "id": 105,
+    "name": "Fitofarmacie",
+    "street": "Adresă indisponibilă",
+    "lat": 45.762907,
+    "lng": 21.2481523,
+    "isOpen": true,
+    "status": "Deschis (Preluat din API)"
+  }
+]
