@@ -154,9 +154,9 @@ export default function PharmaciesPage() {
   const radiusLabel = radiusKm.toFixed(1).replace('.', ',').replace(',0', '');
 
   return (
-    <div className="home">
+    <div className="home home--wide">
       <header className="home__top">
-        <span className="home__logo">Doccom</span>
+        <span className="home__logo">{import.meta.env.VITE_APP_NAME}</span>
         <span className="home__location">{city}</span>
       </header>
 

@@ -1,0 +1,247 @@
+/* Uses the colour tokens from Home.css (--brand, --surface, --tint, --ink, --muted, ...) */
+
+.acct {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 8px;
+  padding-bottom: 110px; /* room for the floating nav */
+}
+
+.acct__title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.acct-card {
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.acct-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.acct-card__head h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.1rem;
+}
+
+.acct-card__head p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.acct-card .btn--small {
+  flex: none;
+}
+
+/* ---------- Profile ---------- */
+.acct-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.acct-profile__avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--tint-strong), #c8e4dc);
+  color: var(--brand-dark);
+  font: 700 1.3rem var(--display);
+}
+
+.acct-profile__name {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+
+.acct-profile__meta {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Forms ---------- */
+.acct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.acct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.acct-field > span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.acct-field input {
+  width: 100%;
+  font: inherit;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--tint);
+  color: var(--ink);
+}
+
+.acct-field input:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+  background: #fff;
+}
+
+.acct-field__wrap {
+  position: relative;
+}
+
+.acct-field__wrap input {
+  padding-right: 84px;
+}
+
+.acct-field__toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--brand);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.acct-field__toggle:hover {
+  background: var(--tint-strong);
+}
+
+.acct-code {
+  font-family: var(--display) !important;
+  font-size: 1.6rem !important;
+  letter-spacing: 0.4em;
+  text-align: center;
+}
+
+.acct-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.acct-error {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fdeceb;
+  color: #a3332e;
+  font-size: 0.9rem;
+}
+
+.acct-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
+
+.acct-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.acct-link:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.acct-link:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.acct-done {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #def3e6;
+  color: #1f7a46;
+}
+
+.acct-done p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.acct-done .acct-link {
+  color: #1f7a46;
+  flex: none;
+}
+
+.acct-signout {
+  align-self: flex-start;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 14px;
+  background: #fdeceb;
+  color: #a3332e;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.acct-signout:hover:not(:disabled) {
+  background: #fadcda;
+}
+
+.acct-signout:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 520px) {
+  .acct-card__head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .acct-card .btn--small {
+    align-self: stretch;
+  }
+}

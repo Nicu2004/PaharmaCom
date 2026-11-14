@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import Home from '../Home/Home';
 import PharmaciesPage from '../pharmacies/PharmaciesPage';
 import BottomNav, { type Tab } from '../components/BottomNav';
+import AppointmentsPage from '../appointments/AppointmentsPage';
+import { TriageProvider } from '../triage/TriageContext';
+import AccountPage from '../account/AccountPage';
+
 
 const HASH: Record<Tab, string> = {
   home: '#/',
@@ -16,16 +20,16 @@ function tabFromHash(): Tab {
   return found ?? 'home';
 }
 
-function ComingSoon({ title }: { title: string }) {
-  return (
-    <div className="home">
-      <main className="home__main" style={{ paddingTop: 48 }}>
-        <h1 className="hero__title">{title}</h1>
-        <p className="hero__upload-description">Această secțiune va fi disponibilă în curând.</p>
-      </main>
-    </div>
-  );
-}
+// function ComingSoon({ title }: { title: string }) {
+//   return (
+//     <div className="home">
+//       <main className="home__main" style={{ paddingTop: 48 }}>
+//         <h1 className="hero__title">{title}</h1>
+//         <p className="hero__upload-description">Această secțiune va fi disponibilă în curând.</p>
+//       </main>
+//     </div>
+//   );
+// }
 
 export default function AppShell() {
   const [tab, setTab] = useState<Tab>(tabFromHash);
@@ -42,12 +46,12 @@ export default function AppShell() {
   };
 
   return (
-    <>
+    <TriageProvider>
       {tab === 'home' && <Home />}
       {tab === 'pharmacies' && <PharmaciesPage />}
-      {tab === 'appointments' && <ComingSoon title="Programări" />}
-      {tab === 'account' && <ComingSoon title="Cont" />}
+      {tab === 'appointments' && <AppointmentsPage />}
+      {tab === 'account' && <AccountPage />}
       <BottomNav active={tab} onChange={change} />
-    </>
+    </TriageProvider>
   );
 }

@@ -79,6 +79,8 @@ interface AuthContextValue {
   /** Call after a successful /login response. */
   signIn: (payload: AuthPayload) => void;
   signOut: () => Promise<void>;
+  /** Replaces the user shown in the app, e.g. after the email was changed in Cont. */
+  updateUser: (user: SessionUser) => void;
   /** fetch() for protected endpoints: adds the access token, retries once after a refresh on 401. */
   authFetch: (input: string, init?: RequestInit) => Promise<Response>;
 }
@@ -213,6 +215,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user,
       signIn: apply,
       signOut,
+      updateUser: setUser,
       authFetch,
     }),
     [status, user, apply, signOut, authFetch],

@@ -1,0 +1,484 @@
+/* Uses the colour tokens from Home.css (--brand, --surface, --tint, --ink, --muted, ...) */
+
+.appt {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.appt__title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.appt__section {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+/* ---------- Symptoms note ---------- */
+.appt-note {
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.appt-note p {
+  margin: 0;
+}
+
+.appt-note__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.appt-note__text {
+  margin-top: 6px !important;
+  overflow-wrap: anywhere;
+}
+
+.appt-note__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.appt-chip {
+  cursor: default;
+  background: var(--tint-strong);
+  color: var(--brand-dark);
+}
+
+.appt-note__hint {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.appt-note a {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* ---------- Doctor cards ---------- */
+.appt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.appt-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.appt-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.appt-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.appt-card__name {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+
+.appt-card__spec {
+  margin: 2px 0 0;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.appt-card__bio {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.appt-card__slot {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--tint);
+  font-size: 0.92rem;
+}
+
+.appt-card .btn {
+  align-self: stretch;
+  padding: 12px 16px;
+}
+
+.appt-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--tint-strong);
+  color: var(--brand-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.appt-avatar {
+  flex: none;
+  border-radius: 20px;
+  object-fit: cover;
+  background: var(--tint-strong);
+}
+
+.appt-avatar--fallback {
+  display: grid;
+  place-items: center;
+  color: var(--brand-dark);
+  font: 700 1.3rem var(--display);
+}
+
+/* ---------- My appointments ---------- */
+.appt-mine {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.appt-mine__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.appt-mine__item p {
+  margin: 0;
+}
+
+.appt-mine__doc {
+  font-weight: 650;
+}
+
+.appt-mine__when {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.appt-mine__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex: none;
+}
+
+.appt-status {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.appt-status--pending { background: #fff4d6; color: #8a6200; }
+.appt-status--accepted { background: #def3e6; color: #1f7a46; }
+.appt-status--declined { background: #fdeceb; color: #a3332e; }
+
+.appt-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.appt-link:hover {
+  text-decoration: underline;
+}
+
+.appt-status-box {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  color: var(--muted);
+}
+
+.appt-status-box--error {
+  background: #fdeceb;
+  color: #a3332e;
+}
+
+/* ---------- Booking pop-up ---------- */
+.appt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(10, 36, 31, 0.5);
+  backdrop-filter: blur(4px);
+  animation: appt-fade 160ms ease;
+}
+
+.appt-modal {
+  width: 100%;
+  max-width: 560px;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 30px 80px -20px rgba(8, 40, 34, 0.5);
+  animation: appt-rise 200ms ease;
+}
+
+.appt-modal__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.appt-modal__who {
+  flex: 1;
+  min-width: 0;
+}
+
+.appt-modal__who h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.appt-modal__who p {
+  margin: 2px 0 0;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.appt-modal__close {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--tint);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.appt-modal__close:hover {
+  background: var(--tint-strong);
+}
+
+.appt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.appt-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 520px) {
+  .appt-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.appt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.appt-field > span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.appt-field input,
+.appt-field select,
+.appt-field textarea,
+.appt-ai textarea {
+  width: 100%;
+  font: inherit;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--tint);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.appt-field input:focus,
+.appt-field select:focus,
+.appt-field textarea:focus,
+.appt-ai textarea:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+  background: #fff;
+}
+
+.appt-ai {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--tint);
+}
+
+.appt-ai textarea {
+  background: #fff;
+  font-size: 0.92rem;
+}
+
+.appt-ai__check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.appt-ai__check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand);
+}
+
+.appt-ai__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.appt-error {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fdeceb;
+  color: #a3332e;
+  font-size: 0.9rem;
+}
+
+.appt-form__submit {
+  align-self: stretch;
+}
+
+.appt-modal__done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0 4px;
+  text-align: center;
+}
+
+.appt-modal__done h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.3rem;
+}
+
+.appt-modal__done p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.appt-modal__check {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #def3e6;
+  color: #1f7a46;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@keyframes appt-fade {
+  from { opacity: 0; }
+}
+
+@keyframes appt-rise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+@media (max-width: 520px) {
+  .appt-overlay {
+    place-items: end center;
+    padding: 0;
+  }
+  .appt-modal {
+    max-width: none;
+    max-height: 92dvh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appt-card,
+  .appt-overlay,
+  .appt-modal {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* "Programează-te la un medic" button shown on the Home screen after an AI answer */
+.hero__book {
+  display: inline-block;
+  align-self: flex-start;
+  text-decoration: none;
+}

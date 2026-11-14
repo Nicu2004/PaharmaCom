@@ -72,6 +72,12 @@ public class RefreshTokenService {
         repo.findByTokenHash(hash(raw)).ifPresent(t -> repo.deleteByFamilyId(t.getFamilyId()));
     }
 
+    /** Ends every session of a user on every device. Used after a password change. */
+    @Transactional
+    public void revokeAllForUser(Long userId) {
+        repo.deleteByUserId(userId);
+    }
+
     private RefreshToken find(String raw) {
         if (raw == null || raw.isBlank()) throw invalid();
         return repo.findByTokenHash(hash(raw)).orElseThrow(RefreshTokenService::invalid);

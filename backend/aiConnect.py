@@ -33,7 +33,7 @@ def analyze_symptoms(text: str, images: List[str]) -> str:
                 "role": "system",
                 "content": (
                     "Summarize the symptoms reported by the user in Romanian with a clean format and without English translation."
-                    "Make a diagnose, recommend medicines, or invent details."
+                    "Make a diagnose, recommend medicines, or invent details. also if the user has general simptoms ask more question about it, also have some context"
                 ),
             },
             user_message,  # Insert the properly formatted dictionary here

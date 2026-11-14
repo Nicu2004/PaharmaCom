@@ -1,5 +1,10 @@
 /* Uses the colour tokens from Home.css (--brand, --surface, --tint, ...) */
 
+/* Wider page than the other tabs, so the map has room */
+.home.home--wide {
+  max-width: 1200px;
+}
+
 .pharm {
   display: flex;
   flex-direction: column;
@@ -13,6 +18,7 @@
   line-height: 1.1;
   font-weight: 700;
   margin: 0;
+  color:#8aa19c;
   letter-spacing: -0.025em;
 }
 
@@ -75,7 +81,7 @@
 .pharm-map {
   position: relative;
   isolation: isolate; /* keeps Leaflet's high z-indexes below the bottom nav */
-  height: min(62vh, 480px);
+  height: clamp(460px, 80vh, 820px);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
