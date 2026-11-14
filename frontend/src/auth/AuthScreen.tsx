@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import './AuthScreen.css';
+import { useAuth, type AuthPayload } from './Authcontext';
 
 export interface UserRegistrationPayload {
   lastName: string;
@@ -19,11 +20,13 @@ const LOGIN_ROUTE: string = import.meta.env?.VITE_LOGIN_ROUTE || '/api/auth/logi
 const postJson = (path: string, body: unknown) =>
   fetch(`${BASE_URL}${path}`, {
     method: 'POST',
+    credentials: 'include', // lets the browser accept the refresh cookie set by /login
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
 
 const AuthScreen: React.FC = () => {
+  const { signIn } = useAuth();
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
   const [step, setStep] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -139,16 +142,23 @@ const AuthScreen: React.FC = () => {
     };
 
     try {
-      const response = isRegistering
-        ? await postJson(REGISTER_ROUTE, registerPayload)
-        : await postJson(LOGIN_ROUTE, { email: email.trim(), password });
-
-      const data = await response.json().catch(() => ({}));
-      if (response.ok) {
-        console.log('Success:', data);
-      } else {
-        setError(data.message || 'Authentication failed');
+      if (isRegistering) {
+        const reg = await postJson(REGISTER_ROUTE, registerPayload);
+        if (!reg.ok) {
+          setError(await readError(reg, 'Registration failed.'));
+          return;
+        }
       }
+
+      // Log in (also right after registering). The server sets the refresh cookie,
+      // the access token comes back in the body and is kept in memory by AuthContext.
+      const response = await postJson(LOGIN_ROUTE, { email: email.trim(), password });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setError(data.message || 'Authentication failed');
+        return;
+      }
+      signIn(data as AuthPayload);
     } catch {
       setError('Network error occurred.');
     } finally {
