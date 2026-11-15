@@ -97,10 +97,10 @@ export default function Home() {
       symptoms: sentText,
       image_base64: sentImages, // the list of base64 strings (image_base64)
     };
-
+    const BASE_URL: string = import.meta.env?.VITE_API_BASE_URL ?? 'http://localhost:8080';
     let reply: string;
     try {
-      const response = await fetch("http://localhost:8000/analyze_symptoms", {
+      const response = await fetch(`${BASE_URL}/ai/analyze_symptoms`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

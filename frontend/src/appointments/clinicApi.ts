@@ -1,6 +1,6 @@
 // Calls to the demo clinic server ("Clinica Demo Vest").
 export const CLINIC_API: string =
-  (import.meta.env?.VITE_CLINIC_API_URL as string | undefined) || 'http://localhost:3000';
+  (import.meta.env?.VITE_CLINIC_API_URL as string | undefined) ?? 'http://localhost:3000';
 
 export interface Doctor {
   id: string;

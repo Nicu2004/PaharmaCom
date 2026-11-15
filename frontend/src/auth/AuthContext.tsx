@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from 'react';
 
-const BASE_URL: string = import.meta.env?.VITE_API_BASE_URL || 'http://localhost:8080';
+const BASE_URL: string = import.meta.env?.VITE_API_BASE_URL ?? 'http://localhost:8080';
 const AJAX_HEADER = { 'X-Requested-With': 'XMLHttpRequest' };
 
 const ACTIVITY_EVENTS = ['mousemove', 'mousedown', 'keydown', 'scroll', 'touchstart'] as const;

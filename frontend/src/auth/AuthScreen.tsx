@@ -13,9 +13,9 @@ export interface UserRegistrationPayload {
   city: string;
 }
 
-const BASE_URL: string = import.meta.env?.VITE_API_BASE_URL || 'http://localhost:8080';
-const REGISTER_ROUTE: string = import.meta.env?.VITE_REGISTER_ROUTE || '/api/auth/register';
-const LOGIN_ROUTE: string = import.meta.env?.VITE_LOGIN_ROUTE || '/api/auth/login';
+const BASE_URL: string = import.meta.env?.VITE_API_BASE_URL ?? 'http://localhost:8080';
+const REGISTER_ROUTE: string = import.meta.env?.VITE_REGISTER_ROUTE ?? '/api/auth/register';
+const LOGIN_ROUTE: string = import.meta.env?.VITE_LOGIN_ROUTE ?? '/api/auth/login';
 
 const postJson = (path: string, body: unknown) =>
   fetch(`${BASE_URL}${path}`, {
