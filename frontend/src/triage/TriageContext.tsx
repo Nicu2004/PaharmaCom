@@ -1,9 +1,17 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 
 /** What the user told the AI on the Home screen, and what the AI answered. */
+export type TriageLevel = 'green' | 'yellow' | 'red';
+
 export interface Triage {
   symptoms: string;
   analysis: string;
+  /** From the triage engine. Medicines are only ever offered for "green". */
+  level?: TriageLevel;
+  /** The active ingredient the engine suggested, e.g. "Ibuprofen". */
+  otcSuggestion?: string | null;
+  /** The otc_category from symptom_triage.json, e.g. "throat_lozenges". */
+  otcCategory?: string | null;
   /** Optional: if the AI backend ever returns the specialties itself, they win over keyword matching. */
   specialties?: string[];
 }

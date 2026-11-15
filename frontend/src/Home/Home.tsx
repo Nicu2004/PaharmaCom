@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Home.css";
 import MultiImageUploader from "../components/MultiImageUploader";
+import { useTriage } from "../triage/TriageContext";
+import MedicineAvailability from "../medicines/MedicineAvailability";
 
 type Level = "green" | "yellow" | "red";
 
@@ -60,6 +62,8 @@ export default function Home() {
   const [uploadKey, setUploadKey] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const { triage, setTriage } = useTriage();
+
   const historyRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -107,7 +111,19 @@ export default function Home() {
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-      reply = data.analysis || "Nu am primit un răspuns valid de la AI.";
+      // Accept either {analysis, triage} or a bare triage object under either key.
+      const t = (data.triage ?? (typeof data.analysis === "object" ? data.analysis : null) ?? data) || {};
+      reply =
+        (typeof data.analysis === "string" && data.analysis) ||
+        (typeof t.message === "string" && t.message) ||
+        "Nu am primit un răspuns valid de la AI.";
+      setTriage({
+        symptoms: sentText,
+        analysis: reply,
+        level: t.triage_level,
+        otcSuggestion: t.otc_suggestion ?? null,
+        otcCategory: t.otc_category ?? null,
+      });
     } catch (err) {
       console.error(err);
       reply = "Nu ne-am putut conecta la server. Încearcă din nou în câteva momente.";
@@ -202,6 +218,16 @@ export default function Home() {
             </button>
           </form>
         </section>
+
+        {/* Medicines are only ever shown for a green triage, and only when the
+            engine told us which category or ingredient fits. */}
+        {triage?.level === "green" && (triage.otcCategory || triage.otcSuggestion) && (
+          <MedicineAvailability
+            category={triage.otcCategory ?? undefined}
+            ingredient={triage.otcCategory ? undefined : (triage.otcSuggestion ?? undefined)}
+            title="Ce poți lua și de unde"
+          />
+        )}
 
         <section className="triage" aria-labelledby="triage-title">
           <h2 id="triage-title" className="section__title">Cum te ajutăm</h2>

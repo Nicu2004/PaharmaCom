@@ -1,0 +1,243 @@
+/* Uses the colour tokens from Home.css (--brand, --surface, --tint, --ink, --muted, ...) */
+
+.med {
+  display: flex;
+  text-align: left; /* index.css centres #root; this section is left-aligned */
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--radius-lg, 22px);
+  background: var(--surface, #fff);
+  box-shadow: var(--shadow-soft, 0 2px 14px rgba(15, 60, 52, 0.08));
+}
+
+.med__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.med__title {
+  margin: 0;
+  font-family: var(--display, inherit);
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.med__sub {
+  margin: 3px 0 0;
+  color: var(--muted, #5d706c);
+  font-size: 0.88rem;
+}
+
+.med__radius {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--tint, #eef5f3);
+}
+
+.med__radius-btn {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted, #5d706c);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.med__radius-btn.is-active {
+  background: var(--brand, #0f6b5c);
+  color: #fff;
+}
+
+.med__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- one product ---------- */
+.med-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md, 16px);
+  background: var(--tint, #eef5f3);
+}
+
+.med-card__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.med-card__info {
+  min-width: 0;
+}
+
+.med-card p {
+  margin: 0;
+}
+
+.med-card__name {
+  font-weight: 650;
+}
+
+.med-card__meta {
+  margin-top: 2px !important;
+  color: var(--muted, #5d706c);
+  font-size: 0.85rem;
+}
+
+.med-card__count {
+  flex: none;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: #def3e6;
+  color: #1f7a46;
+  font-size: 0.78rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.med-card__nearest {
+  font-size: 0.9rem;
+}
+
+.med-card__low {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fff4d6;
+  color: #8a6200;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.med-card__warning {
+  padding: 8px 11px;
+  border-radius: 10px;
+  background: #fff4d6;
+  color: #7a5600;
+  font-size: 0.82rem;
+}
+
+/* ---------- the pharmacies that have it ---------- */
+.med-stock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.med-stock__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--surface, #fff);
+}
+
+.med-stock__item p {
+  margin: 0;
+}
+
+.med-stock__name {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.med-stock__street {
+  color: var(--muted, #5d706c);
+  font-size: 0.82rem;
+}
+
+.med-stock__side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.med-stock__dist {
+  font-weight: 650;
+  color: var(--brand, #0f6b5c);
+  font-size: 0.88rem;
+}
+
+.med-stock__qty {
+  color: var(--muted, #5d706c);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.med-stock__qty.is-low {
+  color: #8a6200;
+  font-weight: 650;
+}
+
+/* ---------- misc ---------- */
+.med__link {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand, #0f6b5c);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.med__link:hover {
+  text-decoration: underline;
+}
+
+.med__note,
+.med__missing,
+.med__status {
+  margin: 0;
+  color: var(--muted, #5d706c);
+  font-size: 0.88rem;
+}
+
+.med__status--error {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fdeceb;
+  color: #a3332e;
+}
+
+.med__disclaimer {
+  margin: 0;
+  padding-top: 4px;
+  color: var(--muted, #5d706c);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 520px) {
+  .med__head {
+    flex-direction: column;
+  }
+  .med__radius {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}
